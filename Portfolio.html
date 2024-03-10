@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Personal Portfolio Website</title>
+    <link rel="stylesheet" href="C:\Users\kavya\Downloads\KS\OneDrive\Documents\Portfolio.css">
+    <script src="https://kit.fontawesome.com/9c2f4ef434.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="h">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li> <a href="#h">Home</a></li>
+                    <li> <a href="#about">About</a></li>
+                    <li> <a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text"></div>
+            <p>Student at Vignan's Lara </p>
+            <p class="text">Hi, I'm <span>KAVYA SRI </span><br> Currently persuing B.TECH.</p>
+        </div>
+                                      <!-------------------------------about me-------------------------------->
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="F:\Bharath\task 3\imageforportfolio.jpg">
+
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am an enthusiastic, self-motivated, reliable, responsible 
+                        and hard working person. I am a mature team worker and 
+                        adaptable to all challenging situations. I am able to work well 
+                        both in a team environment as well as using own initiative. 
+                        I am able to work well under pressure and adhere to strict deadlines.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Experience')" >Experiance</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li>
+                                    <span>Python</span><br>Python Programming
+                                </li>
+                                <li><span>Web development</span><br>Web App Development</li>
+                                <li><span>App Development</span><br>Building Android apps</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Experience">
+                            <ul>
+                                <li>
+                                    <span>2024</span><br>Internship at Bharat Intern
+                                </li>
+                                <li><span>2022-2023</span><br>Coordinater at Social Events in my college.</li>
+                                <li><span>2021-2022</span><br>Participated in various cultural Activites</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li>
+                                    <span>2021-2025</span><br>B.TECH at Vignan's Lara
+                                </li>   
+                                <li><span>2019-2021</span><br> Completed Intermediate </li>
+                                <li><span>2018-2019</span><br>Completed SSC </li>
+                            </ul>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1>Contact Me</h1>
+                <p> <i class="fa-solid fa-paper-plane"></i> sample@contact.com</p>
+                <p> <i class="fa-solid fa-square-phone"></i> 987654321</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+                <a href="allimages/my-cv.pdf" download class="btn btn2s"> Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form >
+                    <input type="text" name="Name" placeholder="Your name" required>
+                    <input type="text" name="email" placeholder="your Email" required>
+                    <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+      <div class="copyright">
+        <p>copyright <i class="fa-regular fa-copyright"></i> kavya. Made with &nbsp; <i class="fa-solid fa-heart fa-beat abc" ></i> &nbsp; &nbsp;by intern </p>
+      </div>
+</div>
+
+
+    <script>
+
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+</body>
+</html>
